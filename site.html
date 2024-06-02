@@ -47,7 +47,7 @@
         <img src="Resviel.png" alt="Player 1">
         <p class="player-name">Resviel</p>
         <p class="player-level">Rogue 4 / Ranger 2</p>
-        <p Player1 Health: <span id="health-number-1">41/41</span></p>
+        <p Player1 Health: <span id="health-number-1">Health: 41/41</span></p>
         <div>
             <input type="number" id="custom-amount-1" placeholder="Enter amount">
             <button onclick="applyCustomHealthAdjustment(1, -1)">Damage</button>
@@ -58,7 +58,7 @@
         <img src="Ukudash.png" alt="Player 2">
         <p class="player-name">Ukudash</p>
         <p class="player-level">Fighter 6</p>
-        <p Player2 Health: <span id="health-number-2">52/52</span></p>
+        <p Player2 Health: <span id="health-number-2">Health: 52/52</span></p>
         <div>
             <input type="number" id="custom-amount-2" placeholder="Enter amount">
             <button onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
@@ -69,7 +69,7 @@
         <img src="Etheriel.png" alt="Player 3">
         <p class="player-name">Etheriel</p>
         <p class="player-level">Warlock 5 / Wizard 1</p>
-        <p Player3 Health: <span id="health-number-3">47/47</span></p>
+        <p Player3 Health: <span id="health-number-3">Health: 47/47</span></p>
         <div>
             <input type="number" id="custom-amount-3" placeholder="Enter amount">
             <button onclick="applyCustomHealthAdjustment(3, -1)">Damage</button>
@@ -80,7 +80,7 @@
         <img src="Garak.png" alt="Player 4">
         <p class="player-name">Garak</p>
         <p class="player-level">Monk 4 / Druid 2</p>
-        <p Player4 Health: <span id="health-number-4">57/57</span></p>
+        <p Player4 Health: <span id="health-number-4">Health: 57/57</span></p>
         <div>
             <input type="number" id="custom-amount-4" placeholder="Enter amount">
             <button onclick="applyCustomHealthAdjustment(4, -1)">Damage</button>
@@ -91,7 +91,7 @@
         <img src="Miyah.png" alt="Player 5">
         <p class="player-name">Miyah</p>
         <p class="player-level">Cleric 6</p>
-        <p Player5 Health: <span id="health-number-5">45/45</span></p>
+        <p Player5 Health: <span id="health-number-5">Health: 45/45</span></p>
         <div>
             <input type="number" id="custom-amount-5" placeholder="Enter amount">
             <button onclick="applyCustomHealthAdjustment(5, -1)">Damage</button>
@@ -113,7 +113,7 @@
                 const healthElement = document.getElementById(`health-number-${playerId}`);
                 if (healthElement) {
                     const player = playersHealth[playerId];
-                    healthElement.textContent = `${player.current}/${player.max}`;
+                    healthElement.textContent = `Health: ${player.current}/${player.max}`;
                 } else {
                     console.error(`Element with ID health-number-${playerId} not found.`);
                 }
