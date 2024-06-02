@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .player {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 100;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        .player img {
+            border-radius: 32%;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+        }
+        .player-name {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .player-health {
+            color: #000000;
+        }
+        .player-level {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="player">
+        <img src="Resviel.png" alt="Player 1">
+        <p class="player-name">Resviel</p>
+        <p class="player-level">Rogue 4 / Ranger 2</p>
+        <p Player1 Health: <span id="health-number-1">41/41</span></p>
+        <div>
+            <input type="number" id="custom-amount-1" placeholder="Enter amount">
+            <button onclick="applyCustomHealthAdjustment(1, -1)">Damage</button>
+            <button onclick="applyCustomHealthAdjustment(1, 1)">Heal</button>
+        </div>
+    </div>
+    <div class="player">
+        <img src="Ukudash.png" alt="Player 2">
+        <p class="player-name">Ukudash</p>
+        <p class="player-level">Fighter 6</p>
+        <p Player2 Health: <span id="health-number-2">52/52</span></p>
+        <div>
+            <input type="number" id="custom-amount-2" placeholder="Enter amount">
+            <button onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
+            <button onclick="applyCustomHealthAdjustment(2, 1)">Heal</button>
+        </div>
+    </div>
+    <div class="player">
+        <img src="Etheriel.png" alt="Player 3">
+        <p class="player-name">Etheriel</p>
+        <p class="player-level">Warlock 5 / Wizard 1</p>
+        <p Player3 Health: <span id="health-number-3">47/47</span></p>
+        <div>
+            <input type="number" id="custom-amount-3" placeholder="Enter amount">
+            <button onclick="applyCustomHealthAdjustment(3, -1)">Damage</button>
+            <button onclick="applyCustomHealthAdjustment(3, 1)">Heal</button>
+        </div>
+    </div>
+    <div class="player">
+        <img src="Garak.png" alt="Player 4">
+        <p class="player-name">Garak</p>
+        <p class="player-level">Monk 4 / Druid 2</p>
+        <p Player4 Health: <span id="health-number-4">57/57</span></p>
+        <div>
+            <input type="number" id="custom-amount-4" placeholder="Enter amount">
+            <button onclick="applyCustomHealthAdjustment(4, -1)">Damage</button>
+            <button onclick="applyCustomHealthAdjustment(4, 1)">Heal</button>
+        </div>
+    </div>
+    <div class="player">
+        <img src="Miyah.png" alt="Player 5">
+        <p class="player-name">Miyah</p>
+        <p class="player-level">Cleric 6</p>
+        <p Player5 Health: <span id="health-number-5">45/45</span></p>
+        <div>
+            <input type="number" id="custom-amount-5" placeholder="Enter amount">
+            <button onclick="applyCustomHealthAdjustment(5, -1)">Damage</button>
+            <button onclick="applyCustomHealthAdjustment(5, 1)">Heal</button>
+        </div>
+    </div>
+
+    <script>
+        const playersHealth = {
+            1: { current: 41, max: 41 },
+            2: { current: 52, max: 52 },
+            3: { current: 47, max: 47 },
+            4: { current: 57, max: 57 },
+            5: { current: 45, max: 45 }
+        };
+
+        function updateHealthDisplay(playerId) {
+                console.log(`Updating health display for player ${playerId}`);
+                const healthElement = document.getElementById(`health-number-${playerId}`);
+                if (healthElement) {
+                    const player = playersHealth[playerId];
+                    healthElement.textContent = `${player.current}/${player.max}`;
+                } else {
+                    console.error(`Element with ID health-number-${playerId} not found.`);
+                }
+            }
+
+            function adjustHealth(playerId, amount) {
+                console.log(`Adjusting health for player ${playerId} by ${amount}`);
+                const player = playersHealth[playerId];
+                player.current = Math.max(0, Math.min(player.max, player.current + amount));
+                updateHealthDisplay(playerId);
+            }
+
+            function applyCustomHealthAdjustment(playerId, multiplier) {
+                console.log(`Applying custom health adjustment for player ${playerId} with multiplier ${multiplier}`);
+                const customAmountInput = document.getElementById(`custom-amount-${playerId}`);
+                const customAmount = parseInt(customAmountInput.value, 10);
+                if (!isNaN(customAmount)) {
+                    adjustHealth(playerId, multiplier * customAmount);
+                } else {
+                    console.error(`Invalid custom amount entered for player ${playerId}`);
+                }
+            }
+
+            // Expose functions to global scope for button onclick handlers
+            window.adjustHealth = adjustHealth;
+            window.applyCustomHealthAdjustment = applyCustomHealthAdjustment;
+        
+    </script>
+</body>
+</html>
