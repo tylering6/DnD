@@ -8,21 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            max-width: 1300px;
             margin: 0;
             padding: 50px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        .main-container {
-            width: 80%;
-            max-width: 1300px;
-            height: auto;
-            background-color: #f0f0f0;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         .player {
             background: #fff;
             border: 1px solid #ddd;
@@ -71,11 +63,11 @@
         .Damage-button {
             background-color: red;
             color: black;
+            font-weight: 3000;
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
     <div class="player">
         <img src="Resviel.png" alt="Player 1">
         <p class="player-name"><a href="https://www.dndbeyond.com/characters/121241160" target="_blank">Resviel</a></p>
@@ -151,7 +143,6 @@
         <p class="player-level"> </p>
         <p Player6 Health: <span id="health-number-6"> </span></p>
     </div>
-</div>
 
     <script>
         const playersHealth = {
