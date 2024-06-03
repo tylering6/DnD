@@ -1,4 +1,0 @@
-Update 1.1 - 6/2/2024
-- Changed the layout to better fit needs (still work in progress)
-- Added dark mode support
-- Updated backend html to adapt to new elements
