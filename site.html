@@ -56,7 +56,7 @@
     </div>
     <div class="player">
         <img src="Ukudash.png" alt="Player 2">
-        <p class="player-name">Ukudash</p>
+        <p class="player-name"><a href="https://www.dndbeyond.com/characters/122269991" target="_blank">Ukudash</a></p>
         <p class="player-level">Fighter 6</p>
         <p Player2 Health: <span id="health-number-2">Health: 52/52</span></p>
         <div>
@@ -124,17 +124,6 @@
                 const player = playersHealth[playerId];
                 player.current = Math.max(0, Math.min(player.max, player.current + amount));
                 updateHealthDisplay(playerId);
-
-                if (amount > 0) {
-                healthElement.classList.add('increase');
-            } else {
-                healthElement.classList.add('decrease');
-            }
-
-            // Remove animation class after animation ends
-            setTimeout(() => {
-                healthElement.classList.remove('increase', 'decrease');
-            }, 300); // match the transition duration
             }
 
             function applyCustomHealthAdjustment(playerId, multiplier) {
