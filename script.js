@@ -43,23 +43,26 @@
             const body = document.body;
             const toggleCheckbox = document.getElementById('mode-toggle');
         
+            // Function to set the mode based on the saved preference or system preference
+            const setMode = (mode) => {
+                body.classList.remove('light-mode', 'dark-mode');
+                body.classList.add(mode);
+                toggleCheckbox.checked = mode === 'dark-mode';
+                localStorage.setItem('mode', mode);
+            };
+        
             // Check for saved user preference in localStorage
             const savedMode = localStorage.getItem('mode');
             if (savedMode) {
-                body.classList.remove('light-mode', 'dark-mode');
-                body.classList.add(savedMode);
-                toggleCheckbox.checked = savedMode === 'dark-mode';
+                setMode(savedMode);
+            } else {
+                // If no saved preference, use system preference
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                setMode(prefersDarkScheme ? 'dark-mode' : 'light-mode');
             }
         
             toggleCheckbox.addEventListener('change', () => {
-                if (toggleCheckbox.checked) {
-                    body.classList.remove('light-mode');
-                    body.classList.add('dark-mode');
-                    localStorage.setItem('mode', 'dark-mode');
-                } else {
-                    body.classList.remove('dark-mode');
-                    body.classList.add('light-mode');
-                    localStorage.setItem('mode', 'light-mode');
-                }
+                const newMode = toggleCheckbox.checked ? 'dark-mode' : 'light-mode';
+                setMode(newMode);
             });
         });

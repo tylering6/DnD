@@ -22,6 +22,12 @@ body.dark-mode {
     color: white;
 }
 
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -43,7 +49,7 @@ body.dark-mode {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    transition: 0.4s;
+    transition: background-color 0.4s;
     border-radius: 34px;
 }
 
@@ -55,7 +61,7 @@ body.dark-mode {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: 0.4s;
+    transition: transform 0.4s, background-color 0.4s;
     border-radius: 50%;
 }
 
@@ -65,7 +71,28 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(26px);
+    background-color: #ffffff;
 }
+
+/* Additional customization for better aesthetics */
+.slider:active:before {
+    width: 28px;
+
+/* Automatic light/dark mode based on system preferences */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+}
+
 .player {
     background: #fff;
     border: 1px solid #ddd;
