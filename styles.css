@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.player {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 100;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+.blank {
+    background: #fff;
+    margin: 100;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+.blank1 {
+    background: #fff;
+    margin: 100;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+.player img {
+    border-radius: 32%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+.player-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+.player-health {
+    color: #000000;
+}
+.player-level {
+    color: #000000;
+}
+.Heal-button {
+    background-color: green;
+    color: white;
+    font-weight: 3000;
+}
+.Damage-button {
+    background-color: red;
+    color: black;
+    font-weight: 3000;
+}
