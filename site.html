@@ -24,6 +24,13 @@
             text-align: center;
             width: 300px;
         }
+        .blank {
+            background: #fff;
+            margin: 100;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
         .player img {
             border-radius: 32%;
             height: 150px;
@@ -63,16 +70,8 @@
             <button class="Heal-button" onclick="applyCustomHealthAdjustment(1, 1)">Heal</button>
         </div>
     </div>
-    <div class="player">
-        <img src="Ukudash.png" alt="Player 2">
-        <p class="player-name"><a href="https://www.dndbeyond.com/characters/122269991" target="_blank">Ukudash</a></p>
-        <p class="player-level">Fighter 6</p>
-        <p Player2 Health: <span id="health-number-2">Health: 52/52</span></p>
-        <div>
-            <input type="number" id="custom-amount-2" placeholder="Enter amount">
-            <button class="Damage-button" onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
-            <button class="Heal-button" onclick="applyCustomHealthAdjustment(2, 1)">Heal</button>
-        </div>
+    <div class="blank">
+
     </div>
     <div class="player">
         <img src="Etheriel.png" alt="Player 3">
@@ -84,6 +83,20 @@
             <button class="Damage-button" onclick="applyCustomHealthAdjustment(3, -1)">Damage</button>
             <button class="Heal-button" onclick="applyCustomHealthAdjustment(3, 1)">Heal</button>
         </div>
+    </div>
+    <div class="player">
+        <img src="Ukudash.png" alt="Player 2">
+        <p class="player-name"><a href="https://www.dndbeyond.com/characters/122269991" target="_blank">Ukudash</a></p>
+        <p class="player-level">Fighter 6</p>
+        <p Player2 Health: <span id="health-number-2">Health: 52/52</span></p>
+        <div>
+            <input type="number" id="custom-amount-2" placeholder="Enter amount">
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(2, 1)">Heal</button>
+        </div>
+    </div>
+    <div class="blank">
+
     </div>
     <div class="player">
         <img src="Garak.png" alt="Player 4">
