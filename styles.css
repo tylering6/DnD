@@ -102,11 +102,11 @@ input:checked + .slider:before {
     margin: 20px;
 }
 
-body.light-mode .player .blank .blank1 {
+body.light-mode .player .blank .blank1 .player-level {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .player .blank .blank1 {
+body.dark-mode .player .blank .blank1 .player-level {
     background-color: #333333;
 }
 
@@ -114,7 +114,7 @@ body.dark-mode .player .blank .blank1 {
     transition: background-color 0.3s;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
     margin: 100;
     padding: 20px;
     text-align: center;
@@ -148,7 +148,7 @@ body.dark-mode .player .blank .blank1 {
     color: #000000;
 }
 .player-level {
-    color: #000000;
+    transition: background-color 0.3s;
 }
 .Heal-button {
     background-color: green;
