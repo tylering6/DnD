@@ -95,13 +95,6 @@ input:checked + .slider:before {
     }
 }
 
-/* Example element that should change color */
-.element-to-change {
-    transition: background-color 0.3s;
-    padding: 20px;
-    margin: 20px;
-}
-
 body.light-mode .player .blank .blank1 .player-level {
     background-color: #f0f0f0;
 }
@@ -111,7 +104,7 @@ body.dark-mode .player .blank .blank1 .player-level {
 }
 .change {
     position: fixed;
-    top: 20px;
+    top: 25px;
     right: 10px;
     display: flex;
     align-items: center;
