@@ -109,6 +109,14 @@ body.light-mode .player .blank .blank1 .player-level {
 body.dark-mode .player .blank .blank1 .player-level {
     background-color: #333333;
 }
+.change {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .player {
     transition: background-color 0.3s;
