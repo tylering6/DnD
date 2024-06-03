@@ -98,21 +98,20 @@ input:checked + .slider:before {
 /* Example element that should change color */
 .element-to-change {
     transition: background-color 0.3s;
-    width: 1200px;
     padding: 20px;
     margin: 20px;
 }
 
-body.light-mode .element-to-change {
+body.light-mode .player .blank .blank1 {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .element-to-change {
+body.dark-mode .player .blank .blank1 {
     background-color: #333333;
 }
 
 .player {
-    /* background: #fff; */
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
