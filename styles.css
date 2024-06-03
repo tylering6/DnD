@@ -161,14 +161,3 @@ body.dark-mode .player .blank .blank1 .player-level {
     color: black;
     font-weight: 3000;
 }
-
-/* Below contains styles for Change-Log.html */
-
-h1 {
-    color: #333;
-}
-.notes {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
