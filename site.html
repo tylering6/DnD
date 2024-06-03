@@ -40,6 +40,12 @@
         .player-level {
             color: #000000;
         }
+        .Heal-button {
+            color: green;
+        }
+        .Damage-button {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -50,8 +56,8 @@
         <p Player1 Health: <span id="health-number-1">Health: 41/41</span></p>
         <div>
             <input type="number" id="custom-amount-1" placeholder="Enter amount">
-            <button onclick="applyCustomHealthAdjustment(1, -1)">Damage</button>
-            <button onclick="applyCustomHealthAdjustment(1, 1)">Heal</button>
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(1, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(1, 1)">Heal</button>
         </div>
     </div>
     <div class="player">
@@ -61,8 +67,8 @@
         <p Player2 Health: <span id="health-number-2">Health: 52/52</span></p>
         <div>
             <input type="number" id="custom-amount-2" placeholder="Enter amount">
-            <button onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
-            <button onclick="applyCustomHealthAdjustment(2, 1)">Heal</button>
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(2, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(2, 1)">Heal</button>
         </div>
     </div>
     <div class="player">
@@ -72,8 +78,8 @@
         <p Player3 Health: <span id="health-number-3">Health: 47/47</span></p>
         <div>
             <input type="number" id="custom-amount-3" placeholder="Enter amount">
-            <button onclick="applyCustomHealthAdjustment(3, -1)">Damage</button>
-            <button onclick="applyCustomHealthAdjustment(3, 1)">Heal</button>
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(3, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(3, 1)">Heal</button>
         </div>
     </div>
     <div class="player">
@@ -83,8 +89,8 @@
         <p Player4 Health: <span id="health-number-4">Health: 57/57</span></p>
         <div>
             <input type="number" id="custom-amount-4" placeholder="Enter amount">
-            <button onclick="applyCustomHealthAdjustment(4, -1)">Damage</button>
-            <button onclick="applyCustomHealthAdjustment(4, 1)">Heal</button>
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(4, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(4, 1)">Heal</button>
         </div>
     </div>
     <div class="player">
@@ -94,8 +100,8 @@
         <p Player5 Health: <span id="health-number-5">Health: 45/45</span></p>
         <div>
             <input type="number" id="custom-amount-5" placeholder="Enter amount">
-            <button onclick="applyCustomHealthAdjustment(5, -1)">Damage</button>
-            <button onclick="applyCustomHealthAdjustment(5, 1)">Heal</button>
+            <button class="Damage-button" onclick="applyCustomHealthAdjustment(5, -1)">Damage</button>
+            <button class="Heal-button" onclick="applyCustomHealthAdjustment(5, 1)">Heal</button>
         </div>
     </div>
 
