@@ -17,24 +17,48 @@
                 }
             }
 
-            function adjustHealth(playerId, amount) {
-                console.log(`Adjusting health for player ${playerId} by ${amount}`);
-                const player = playersHealth[playerId];
-                player.current = Math.max(0, Math.min(player.max, player.current + amount));
-                updateHealthDisplay(playerId);
-            }
+        function adjustHealth(playerId, amount) {
+            console.log(`Adjusting health for player ${playerId} by ${amount}`);
+            const player = playersHealth[playerId];
+            player.current = Math.max(0, Math.min(player.max, player.current + amount));
+            updateHealthDisplay(playerId);
+        }
 
-            function applyCustomHealthAdjustment(playerId, multiplier) {
-                console.log(`Applying custom health adjustment for player ${playerId} with multiplier ${multiplier}`);
-                const customAmountInput = document.getElementById(`custom-amount-${playerId}`);
-                const customAmount = parseInt(customAmountInput.value, 10);
-                if (!isNaN(customAmount)) {
-                    adjustHealth(playerId, multiplier * customAmount);
+        function applyCustomHealthAdjustment(playerId, multiplier) {
+            console.log(`Applying custom health adjustment for player ${playerId} with multiplier ${multiplier}`);
+            const customAmountInput = document.getElementById(`custom-amount-${playerId}`);
+            const customAmount = parseInt(customAmountInput.value, 10);
+            if (!isNaN(customAmount)) {
+                adjustHealth(playerId, multiplier * customAmount);
+            } else {
+                console.error(`Invalid custom amount entered for player ${playerId}`);
+            }
+        }
+
+        // Expose functions to global scope for button onclick handlers
+        window.adjustHealth = adjustHealth;
+        window.applyCustomHealthAdjustment = applyCustomHealthAdjustment;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const toggleButton = document.getElementById('mode-toggle');
+        
+            // Check for saved user preference in localStorage
+            const savedMode = localStorage.getItem('mode');
+            if (savedMode) {
+                body.classList.remove('light-mode', 'dark-mode');
+                body.classList.add(savedMode);
+            }
+        
+            toggleButton.addEventListener('click', () => {
+                if (body.classList.contains('light-mode')) {
+                    body.classList.remove('light-mode');
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('mode', 'dark-mode');
                 } else {
-                    console.error(`Invalid custom amount entered for player ${playerId}`);
+                    body.classList.remove('dark-mode');
+                    body.classList.add('light-mode');
+                    localStorage.setItem('mode', 'light-mode');
                 }
-            }
-
-            // Expose functions to global scope for button onclick handlers
-            window.adjustHealth = adjustHealth;
-            window.applyCustomHealthAdjustment = applyCustomHealthAdjustment;
+            });
+        });
