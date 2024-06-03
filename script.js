@@ -41,17 +41,18 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
-            const toggleButton = document.getElementById('mode-toggle');
+            const toggleCheckbox = document.getElementById('mode-toggle');
         
             // Check for saved user preference in localStorage
             const savedMode = localStorage.getItem('mode');
             if (savedMode) {
                 body.classList.remove('light-mode', 'dark-mode');
                 body.classList.add(savedMode);
+                toggleCheckbox.checked = savedMode === 'dark-mode';
             }
         
-            toggleButton.addEventListener('click', () => {
-                if (body.classList.contains('light-mode')) {
+            toggleCheckbox.addEventListener('change', () => {
+                if (toggleCheckbox.checked) {
                     body.classList.remove('light-mode');
                     body.classList.add('dark-mode');
                     localStorage.setItem('mode', 'dark-mode');
