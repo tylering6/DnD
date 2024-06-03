@@ -124,6 +124,17 @@
                 const player = playersHealth[playerId];
                 player.current = Math.max(0, Math.min(player.max, player.current + amount));
                 updateHealthDisplay(playerId);
+
+                if (amount > 0) {
+                healthElement.classList.add('increase');
+            } else {
+                healthElement.classList.add('decrease');
+            }
+
+            // Remove animation class after animation ends
+            setTimeout(() => {
+                healthElement.classList.remove('increase', 'decrease');
+            }, 300); // match the transition duration
             }
 
             function applyCustomHealthAdjustment(playerId, multiplier) {
