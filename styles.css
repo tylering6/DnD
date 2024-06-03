@@ -111,7 +111,7 @@ body.dark-mode .player .blank .blank1 {
 }
 
 .player {
-    background: #fff;
+    transition: background-color 0.3s;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -121,14 +121,14 @@ body.dark-mode .player .blank .blank1 {
     width: 300px;
 }
 .blank {
-    background: #fff;
+    transition: background-color 0.3s;
     margin: 100;
     padding: 20px;
     text-align: center;
     width: 200px;
 }
 .blank1 {
-    background: #fff;
+    transition: background-color 0.3s;
     margin: 100;
     padding: 20px;
     text-align: center;
