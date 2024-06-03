@@ -153,6 +153,10 @@
             window.adjustHealth = adjustHealth;
             window.applyCustomHealthAdjustment = applyCustomHealthAdjustment;
         
+            fetch('garakobama.mvhsrobotics.org/site.html/log-ip')
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
     </script>
 </body>
 </html>
