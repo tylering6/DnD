@@ -38,8 +38,13 @@ function sortList() {
 function toggleList() {
     const inputArea = document.getElementById('inputArea');
     const playerList = document.getElementById('playerList');
-    inputArea.classList.toggle('hidden');
-    playerList.classList.toggle('hidden');
+    if (inputArea.classList.contains('hidden')) {
+        inputArea.classList.remove('hidden');
+        playerList.classList.remove('hidden');
+    } else {
+        inputArea.classList.add('hidden');
+        playerList.classList.add('hidden');
+    }
 }
 
 function updateList(players = []) {
