@@ -6,17 +6,11 @@
     <title>Sortable Player List</title>
     <link rel="stylesheet" href="Initiative-Styles.css">
 </head>
-<body class="light-mode">
-    <div class="switch-container">
-        <span id="light-label">Light Mode</span>
-        <label class="switch">
-            <input type="checkbox" id="mode-toggle">
-            <span class="slider"></span>
-        </label>
-        <span id="dark-label">Dark Mode</span>
-    </div>
+<body>
     <div class="container">
-        <div>
+        <button onclick="toggleList()">Show/Hide List</button>
+        <div id="inputArea">
+            <div>
             <input type="text" id="enemyInput" placeholder="Enter enemy name">
             <input type="number" id="enemyNumber" placeholder="Enter Initiative Roll">
             <button onclick="addEnemy()">Add Enemy</button>
