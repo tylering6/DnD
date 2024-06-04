@@ -83,31 +83,3 @@ function updateList(players = []) {
 
 // Initialize list with permanent players
 updateList();
-
-document.addEventListener('DOMContentLoaded', () => {
-    const body = document.body;
-    const toggleCheckbox = document.getElementById('mode-toggle');
-
-    // Function to set the mode based on the saved preference or system preference
-    const setMode = (mode) => {
-        body.classList.remove('light-mode', 'dark-mode');
-        body.classList.add(mode);
-        toggleCheckbox.checked = mode === 'dark-mode';
-        localStorage.setItem('mode', mode);
-    };
-
-    // Check for saved user preference in localStorage
-    const savedMode = localStorage.getItem('mode');
-    if (savedMode) {
-        setMode(savedMode);
-    } else {
-        // If no saved preference, use system preference
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        setMode(prefersDarkScheme ? 'dark-mode' : 'light-mode');
-    }
-
-    toggleCheckbox.addEventListener('change', () => {
-        const newMode = toggleCheckbox.checked ? 'dark-mode' : 'light-mode';
-        setMode(newMode);
-    });
-});
