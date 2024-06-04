@@ -36,9 +36,7 @@ function sortList() {
 }
 
 function toggleList() {
-    const inputArea = document.getElementById('inputArea');
     const playerList = document.getElementById('playerList');
-    inputArea.classList.toggle('hidden');
     playerList.classList.toggle('hidden');
 }
 
