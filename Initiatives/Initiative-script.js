@@ -31,7 +31,7 @@ function sortList() {
         })),
         ...enemies
     ];
-    allPlayers.sort((a, b) => a.number - b.number);
+    allPlayers.sort((a, b) => b.number - a.number); // Sort from highest to lowest
     updateList(allPlayers);
 }
 
@@ -52,6 +52,7 @@ function updateList(players = []) {
             })),
             ...enemies
         ];
+        players.sort((a, b) => b.number - a.number); // Sort from highest to lowest
     }
 
     players.forEach(player => {
