@@ -53,17 +53,17 @@ function updateList(players = []) {
     players.forEach(player => {
         const li = document.createElement('li');
         
-        const span = document.createElement('span');
-        span.textContent = `${player.name}: ${player.number}`;
-        li.appendChild(span);
-
-        if (!permanentPlayers.some(p => p.name === player.name)) {
+        if (!player.name.startsWith('Player ')) {
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
             removeButton.className = 'remove-btn';
             removeButton.onclick = () => removeEnemy(player.name);
-            li.insertBefore(removeButton, span); // Insert the button before the text
+            li.appendChild(removeButton);
         }
+
+        const span = document.createElement('span');
+        span.textContent = `${player.name}: ${player.number}`;
+        li.appendChild(span);
         
         playerList.appendChild(li);
     });
