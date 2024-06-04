@@ -121,17 +121,22 @@ body.dark-mode .player .blank .blank1 .player-level {
     width: 300px;
 }
 .player2 {
-    background-color: #a200ff; /* First color */
     position: relative;
 }
-.player2::before {
+.player2::before,
+.player2::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: #009af3; /* Second color */
+}
+player2::before {
+    background-color: #a200ff60; /* First color */
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+player2::after {
+    background-color: #009af3a6; /* Second color */
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 .blank {
     transition: background-color 0.3s;
