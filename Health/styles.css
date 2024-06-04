@@ -118,30 +118,30 @@ body.dark-mode .blank .blank1 .player-level {
     text-align: center;
     width: 300px;
 }
-.player1a {
+.Resviel {
     position: fixed;
     top: 100px;
     left: 50px;
 }
-.player2a {
+.Etheriel {
     position: fixed;
     top: 100px;
-    left: 600px;
+    left: 650px;
 }
-.player3a {
+.Ukudash {
     position: fixed;
     top: 475px;
     left: 50px;
 }
-.player4a {
+.Garak {
     position: fixed;
     top: 475px;
-    left: 600px;
+    left: 650px;
 }
-.player5a {
+.Miyah {
     position: fixed;
     top: 850px;
-    left: 300;
+    left: 350;
 }
 
 .player2 {
@@ -163,13 +163,6 @@ body.dark-mode .blank .blank1 .player-level {
 .player2::after {
     background-color: #009af3a6; /* Second color */
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
-}
-.blank {
-    transition: background-color 0.3s;
-    margin: 100;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
 }
 .player img {
     border-radius: 32%;
