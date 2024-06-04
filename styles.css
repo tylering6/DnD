@@ -126,7 +126,7 @@ body.dark-mode .player .blank .blank1 .player-level {
     margin: 100;
     padding: 20px;
     text-align: center;
-    width: 200px;
+    width: 300px;
 }
 .blank1 {
     transition: background-color 0.3s;
