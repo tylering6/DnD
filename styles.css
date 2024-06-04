@@ -111,13 +111,53 @@ body.dark-mode .player .blank .blank1 .player-level {
     gap: 10px;
 }
 
-.player {
+.player1 {
     transition: background-color 0.3s;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     margin: 100;
-    padding: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+.player2 {
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin: 100;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+.player3 {
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin: 100;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+.player4 {
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin: 100;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+}
+.player5 {
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin: 100;
+    padding: 30px;
     text-align: center;
     width: 300px;
 }
