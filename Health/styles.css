@@ -105,7 +105,7 @@ body.dark-mode .blank .blank1 .player-level {
 
 /*Page Placement*/
 .change {
-    position: fixed;
+    position: absolute;
     top: 25px;
     right: 10px;
     display: flex;
@@ -113,7 +113,7 @@ body.dark-mode .blank .blank1 .player-level {
     gap: 10px;
 }
 .Initiative {
-    position: fixed;
+    position: absolute;
     top: 50px;
     right: 10px;
     display: flex;
@@ -127,7 +127,6 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Etheriel {
     position: absolute;
-    align-content: left;
     top: 100px;
     left: 670px;
 }
@@ -143,7 +142,6 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Miyah {
     position: absolute;
-    align-content: left;
     top: 850px;
     left: 310;
 }
