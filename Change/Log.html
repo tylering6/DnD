@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD Health Change-Log</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            transition: background-color 0.3s;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .notes {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .note {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        .note:last-child {
+            border-bottom: none;
+        }
+        .note h2 {
+            margin-top: 0;
+            color: #007BFF;
+            cursor: pointer;
+        }
+        .note-content {
+            display: none;
+            padding-top: 10px;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            max-height: 0;
+        }
+        .note:hover {
+            background-color: #f0f8ff;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Recent Update Notes</h1>
+    <div class="notes" id="notes-container">
+        <!-- Notes will be inserted here by JavaScript -->
+    </div>
+    <div class="error" id="error-message" style="display: none;">
+        Unable to fetch update notes. Please try again later.
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('update_notes.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const notesContainer = document.getElementById('notes-container');
+                    data.forEach(update => {
+                        const noteDiv = document.createElement('div');
+                        noteDiv.className = 'note';
+
+                        const noteTitle = document.createElement('h2');
+                        noteTitle.textContent = `Version ${update.version} - ${update.date}`;
+                        noteTitle.addEventListener('click', function() {
+                            const noteContent = this.nextElementSibling;
+                            if (noteContent.style.display === 'none' || noteContent.style.display === '') {
+                                noteContent.style.display = 'block';
+                                noteContent.style.maxHeight = noteContent.scrollHeight + 'px';
+                            } else {
+                                noteContent.style.maxHeight = 0;
+                                setTimeout(() => {
+                                    noteContent.style.display = 'none';
+                                }, 500);
+                            }
+                        });
+                        noteDiv.appendChild(noteTitle);
+
+                        const noteContent = document.createElement('div');
+                        noteContent.className = 'note-content';
+                        update.notes.forEach(note => {
+                            const noteParagraph = document.createElement('p');
+                            noteParagraph.textContent = note;
+                            noteContent.appendChild(noteParagraph);
+                        });
+
+                        noteDiv.appendChild(noteContent);
+                        notesContainer.appendChild(noteDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching update notes:', error);
+                    const errorMessage = document.getElementById('error-message');
+                    errorMessage.style.display = 'block';
+                });
+        });
+    </script>
+</body>
+</html>
+
+Notes Template Below
+
+{
+    "version": "x.x.x",
+    "date": "June x, 2024",
+    "notes": [
+        "",
+        "",
+        "",
+        ""
+    ]
+},

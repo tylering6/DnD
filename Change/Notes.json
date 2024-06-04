@@ -1,0 +1,30 @@
+[
+        {
+        "version": "1.2.0",
+        "date": "June 4, 2024",
+        "notes": [
+            "Changed the structure of the front and backend",
+            "Adjusted the appearance to better support mobile"
+        ]
+    },
+        {
+        "version": "1.1.0",
+        "date": "June 3, 2024",
+        "notes": [
+            "Finalized the layout of each character",
+            "Updated Change Log stlyes and backend html",
+            "Added an initiative tracker with enemy support"
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "June 2, 2024",
+        "notes": [
+            "Changed the layout to better fit needs (still work in progress).",
+            "Added dark mode support.",
+            "Added automatic dark/light mode support based on your prefrences.",
+            "Updated backend html to adapt to new elements."
+        ]
+    }
+
+]
