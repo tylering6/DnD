@@ -119,6 +119,7 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Etheriel {
     position: absolute;
+    align-content: left;
     top: 100px;
     left: 670px;
 }
@@ -134,6 +135,7 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Miyah {
     position: absolute;
+    align-content: left;
     top: 850px;
     left: 310;
 }
