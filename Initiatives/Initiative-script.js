@@ -36,7 +36,9 @@ function sortList() {
 }
 
 function toggleList() {
+    const inputArea = document.getElementById('inputArea');
     const playerList = document.getElementById('playerList');
+    inputArea.classList.toggle('hidden');
     playerList.classList.toggle('hidden');
 }
 
@@ -58,7 +60,7 @@ function updateList(players = []) {
     players.forEach(player => {
         const li = document.createElement('li');
         
-        if (!player.name.startsWith('Player ')) {
+        if (!permanentPlayers.some(p => p.name === player.name)) {
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
             removeButton.className = 'remove-btn';
