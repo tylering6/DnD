@@ -119,9 +119,33 @@ body.dark-mode .blank .blank1 .player-level {
     padding: 20px;
     text-align: center;
     width: 300px;
-    position: fixed;
-    top: 10px;
 }
+.player1a {
+    position: fixed;
+    top: 100px;
+    left: 50px;
+}
+.player2a {
+    position: fixed;
+    top: 100px;
+    left: 600px;
+}
+.player3a {
+    position: fixed;
+    top: 450px;
+    left: 50px;
+}
+.player4a {
+    position: fixed;
+    top: 450px;
+    left: 600px;
+}
+.player5a {
+    position: fixed;
+    top: 800px;
+    left: 300;
+}
+
 .player2 {
     position: relative;
     overflow: hidden;
