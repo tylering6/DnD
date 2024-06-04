@@ -6,21 +6,118 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
 }
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.switch-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: transform 0.4s, background-color 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: #ffffff;
+}
+
+/* Additional customization for better aesthetics */
+.slider:active:before {
+    width: 28px;
+}
+
+/* Automatic light/dark mode based on system preferences */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+body.light-mode .blank .blank1 .player-level {
+    background-color: #f0f0f0;
+}
+
+body.dark-mode .blank .blank1 .player-level {
+    background-color: #333333;
+}
+.change {
+    position: fixed;
+    top: 25px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
     text-align: center;
-    background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
 }
 
 input {
     padding: 10px;
     margin: 5px;
-    width: calc(100% - 30px); /* Adjusting width to fit mobile */
+    width: 150px;
 }
 
 button {
