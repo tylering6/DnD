@@ -119,6 +119,8 @@ body.dark-mode .blank .blank1 .player-level {
     padding: 20px;
     text-align: center;
     width: 300px;
+    position: fixed;
+    top: 10px;
 }
 .player2 {
     position: relative;
@@ -149,19 +151,19 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .player img {
     border-radius: 32%;
-    height: 150px;
-    width: 150px;
+    height: 175px;
+    width: 175px;
     object-fit: cover;
     z-index: 2;
 }
 .player-name {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 10px 0;
     z-index: 2;
 }
 .player-health {
     color: #000000;
-    font-size: 32px;
+    font-size: 1.5em;
     z-index: 2;
 }
 .player-level {
