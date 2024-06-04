@@ -128,13 +128,13 @@ body.dark-mode .player .blank .blank1 .player-level {
     text-align: center;
     width: 200px;
 }
-/* .blank1 {
+.blank1 {
     transition: background-color 0.3s;
     margin: 100;
     padding: 20px;
     text-align: center;
     width: 200px;
-} */
+}
 .player img {
     border-radius: 32%;
     height: 150px;
