@@ -8,13 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <div>
-            <input type="text" id="enemyInput" placeholder="Enter enemy name">
-            <input type="number" id="enemyNumber" placeholder="Enter Initiative Roll">
-            <button onclick="addEnemy()">Add Enemy</button>
-        </div>
-        <div id="permanentPlayers">
+        <button onclick="toggleList()">Show/Hide List</button>
+        <div id="inputArea">
             <div>
+                <input type="text" id="enemyInput" placeholder="Enter enemy name">
+                <input type="number" id="enemyNumber" placeholder="Enter Initiative Roll">
+                <button onclick="addEnemy()">Add Enemy</button>
+            </div>
+            <div id="permanentPlayers">
+                <div>
                 <span>Resviel:</span>
                 <input type="number" id="player1Number" placeholder="Enter Initiative Roll">
             </div>
@@ -36,9 +38,9 @@
             </div>
         </div>
         <button onclick="sortList()">Sort List</button>
-        <button onclick="toggleList()">Show/Hide List</button>
-        <ul id="playerList" class="hidden"></ul>
     </div>
-    <script src="Initiative-script.js"></script>
+    <ul id="playerList" class="hidden"></ul>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
