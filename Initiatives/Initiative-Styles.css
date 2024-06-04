@@ -90,11 +90,11 @@ input:checked + .slider:before {
     }
 }
 
-body.light-mode .blank .blank1 .player-level {
+body.light-mode .container {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .blank .blank1 .player-level {
+body.dark-mode .container {
     background-color: #333333;
 }
 .change {
