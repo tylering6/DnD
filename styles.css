@@ -95,11 +95,11 @@ input:checked + .slider:before {
     }
 }
 
-body.light-mode .player .blank .blank1 .player-level {
+body.light-mode .blank .blank1 .player-level {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .player .blank .blank1 .player-level {
+body.dark-mode .blank .blank1 .player-level {
     background-color: #333333;
 }
 .change {
