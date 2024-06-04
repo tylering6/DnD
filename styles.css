@@ -132,11 +132,11 @@ body.dark-mode .blank .blank1 .player-level {
     height: 100%;
     z-index: 1; /* Ensure it's behind the content */
 }
-player2::before {
+.player2::before {
     background-color: #a200ff60; /* First color */
     clip-path: polygon(0 0, 100% 0, 0 100%);
 }
-player2::after {
+.player2::after {
     background-color: #009af3a6; /* Second color */
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
