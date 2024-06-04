@@ -35,18 +35,6 @@ function sortList() {
     updateList(allPlayers);
 }
 
-function toggleList() {
-    const inputArea = document.getElementById('inputArea');
-    const playerList = document.getElementById('playerList');
-    if (inputArea.classList.contains('hidden')) {
-        inputArea.classList.remove('hidden');
-        playerList.classList.remove('hidden');
-    } else {
-        inputArea.classList.add('hidden');
-        playerList.classList.add('hidden');
-    }
-}
-
 function updateList(players = []) {
     const playerList = document.getElementById('playerList');
     playerList.innerHTML = '';
@@ -65,17 +53,17 @@ function updateList(players = []) {
     players.forEach(player => {
         const li = document.createElement('li');
         
+        const span = document.createElement('span');
+        span.textContent = `${player.name}: ${player.number}`;
+        li.appendChild(span);
+
         if (!permanentPlayers.some(p => p.name === player.name)) {
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
             removeButton.className = 'remove-btn';
             removeButton.onclick = () => removeEnemy(player.name);
-            li.appendChild(removeButton);
+            li.insertBefore(removeButton, span); // Insert the button before the text
         }
-
-        const span = document.createElement('span');
-        span.textContent = `${player.name}: ${player.number}`;
-        li.appendChild(span);
         
         playerList.appendChild(li);
     });
