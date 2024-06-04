@@ -6,41 +6,38 @@
     <title>Sortable Player List</title>
     <link rel="stylesheet" href="Initiative-Styles.css">
 </head>
-<body>
-    <div class="container">
-        <button onclick="toggleList()">Show/Hide List</button>
-        <div id="inputArea">
-            <div>
-            <input type="text" id="enemyInput" placeholder="Enter enemy name">
-            <input type="number" id="enemyNumber" placeholder="Enter Initiative Roll">
-            <button onclick="addEnemy()">Add Enemy</button>
-        </div>
-        <div id="permanentPlayers">
-            <div>
-                <span>Resviel:</span>
-                <input type="number" id="player1Number" placeholder="Enter Initiative Roll">
-            </div>
-            <div>
-                <span>Etheriel:</span>
-                <input type="number" id="player2Number" placeholder="Enter Initiative Roll">
-            </div>
-            <div>
-                <span>Ukudash</u>:</span>
-                <input type="number" id="player3Number" placeholder="Enter Initiative Roll">
-            </div>
-            <div>
-                <span>Garak:</span>
-                <input type="number" id="player4Number" placeholder="Enter Initiative Roll">
-            </div>
-            <div>
-                <span>Miyah:</span>
-                <input type="number" id="player5Number" placeholder="Enter Initiative Roll">
-            </div>
-        </div>
-        <button onclick="sortList()">Sort List</button>
-        <button onclick="toggleList()">Show/Hide List</button>
-        <ul id="playerList" class="hidden"></ul>
+<body class="container">
+    <div>
+        <input type="text" id="enemyInput" placeholder="Enter enemy name">
+        <input type="number" id="enemyNumber" placeholder="Enter Initiative Roll">
+        <button onclick="addEnemy()">Add Enemy</button>
     </div>
+    <div id="permanentPlayers">
+        <div>
+            <span>Resviel:</span>
+            <input type="number" id="player1Number" placeholder="Enter Initiative Roll">
+        </div>
+        <div>
+            <span>Etheriel:</span>
+            <input type="number" id="player2Number" placeholder="Enter Initiative Roll">
+        </div>
+        <div>
+            <span>Ukudash</u>:</span>
+            <input type="number" id="player3Number" placeholder="Enter Initiative Roll">
+        </div>
+        <div>
+            <span>Garak:</span>
+            <input type="number" id="player4Number" placeholder="Enter Initiative Roll">
+        </div>
+        <div>
+            <span>Miyah:</span>
+            <input type="number" id="player5Number" placeholder="Enter Initiative Roll">
+        </div>
+    </div>
+    <button onclick="sortList()">Sort List</button>
+    <button onclick="toggleList()">Show/Hide List</button>
+    <ul id="playerList" class="hidden"></ul>
+    
     <script src="Initiative-script.js"></script>
 </body>
 </html>
