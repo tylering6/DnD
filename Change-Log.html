@@ -4,40 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DnD Health Change-Log</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            transition: background-color 0.3s, color 0.3s;
+            background-color: #f4f4f9;
+            color: #333;
         }
         h1 {
             color: #333;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .notes {
             border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .note {
+            margin-bottom: 20px;
             padding: 10px;
+            border-bottom: 1px solid #eee;
             transition: background-color 0.3s;
         }
-    </style>>
+        .note:last-child {
+            border-bottom: none;
+        }
+        .note:hover {
+            background-color: #f0f8ff;
+        }
+        .note h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .note p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+    </style>
 
 </head>
 <body>
     <h1>Recent Update Notes</h1>
     <div class="notes">
-        <h2>Version 1.1.0 - June 2, 2024</h2>
-        <p>- Changed the layout to better fit needs (still work in progress).</p>
-        <p>- Added dark mode support.</p>
-        <p>- Added automatic dark/light mode support based on your prefrences.</p>
-        <p>- Updated backend html to adapt to new elements.</p>
+        <div class="note">
+            <h2>Version 1.1.0 - June 2, 2024</h2>
+            <p>- Changed the layout to better fit needs (still work in progress).</p>
+            <p>- Added dark mode support.</p>
+            <p>- Added automatic dark/light mode support based on your prefrences.</p>
+            <p>- Updated backend html to adapt to new elements.</p>
+        </div>
+        <div class="note">
+            <h2>Version 1.2.0 - Coming Soon</h2>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
     </div>
-    <div class="notes">
-        <h2>Version 1.2.0 - Coming Soon</h2>
-        <p><br></p>
-        <p><br></p>
-        <p><br></p>
-        <p><br></p>
     </div>
 </body>
 </html>
