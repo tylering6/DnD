@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Player List</title>
+    <link rel="stylesheet" href="Initiative-Styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="playerInput" placeholder="Enter player name">
+        <button onclick="addEnemy()">Add Enemy</button>
+        <button onclick="removePlayer()">Remove Player</button>
+        <br>
+        <input type="text" id="enemyInput" placeholder="Enter enemy name">
+        <input type="text" id="customEnemyName" placeholder="Enter custom name for enemy">
+        <button onclick="addEnemy()">Add Enemy</button>
+        <button onclick="removeEnemy()">Remove Enemy</button>
+        <br>
+        <button onclick="sortList()">Sort List</button>
+        <button onclick="toggleList()">Show/Hide List</button>
+        <ul id="playerList" class="hidden"></ul>
+    </div>
+    <script src="Initiative-script.js"></script>
+</body>
+</html>
