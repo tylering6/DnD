@@ -112,7 +112,6 @@ body.dark-mode .player .blank .blank1 .player-level {
 }
 
 .player {
-    transition: background-color 0.3s;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
@@ -120,6 +119,19 @@ body.dark-mode .player .blank .blank1 .player-level {
     padding: 20px;
     text-align: center;
     width: 300px;
+}
+.player2 {
+    background-color: #a200ff; /* First color */
+    position: relative;
+}
+.player2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #009af3; /* Second color */
 }
 .blank {
     transition: background-color 0.3s;
@@ -140,6 +152,7 @@ body.dark-mode .player .blank .blank1 .player-level {
 }
 .player-health {
     color: #000000;
+    font-size: 32px;
 }
 .player-level {
     transition: background-color 0.3s;
