@@ -6,7 +6,15 @@
     <title>Sortable Player List</title>
     <link rel="stylesheet" href="Initiative-Styles.css">
 </head>
-<body>
+<body class="light-mode">
+    <div class="switch-container">
+        <span id="light-label">Light Mode</span>
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+        </label>
+        <span id="dark-label">Dark Mode</span>
+    </div>
     <div class="container">
         <div>
             <input type="text" id="enemyInput" placeholder="Enter enemy name">
