@@ -8,15 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <input type="text" id="playerInput" placeholder="Enter player name">
-        <button onclick="addEnemy()">Add Enemy</button>
-        <button onclick="removePlayer()">Remove Player</button>
-        <br>
-        <input type="text" id="enemyInput" placeholder="Enter enemy name">
-        <input type="text" id="customEnemyName" placeholder="Enter custom name for enemy">
-        <button onclick="addEnemy()">Add Enemy</button>
-        <button onclick="removeEnemy()">Remove Enemy</button>
-        <br>
+        <div>
+            <input type="text" id="enemyInput" placeholder="Enter enemy name">
+            <input type="number" id="enemyNumber" placeholder="Enter number">
+            <button onclick="addEnemy()">Add Enemy</button>
+        </div>
+        <div id="permanentPlayers">
+            <div>
+                <span>Player 1:</span>
+                <input type="number" id="player1Number" placeholder="Enter number">
+            </div>
+            <div>
+                <span>Player 2:</span>
+                <input type="number" id="player2Number" placeholder="Enter number">
+            </div>
+            <div>
+                <span>Player 3:</span>
+                <input type="number" id="player3Number" placeholder="Enter number">
+            </div>
+            <div>
+                <span>Player 4:</span>
+                <input type="number" id="player4Number" placeholder="Enter number">
+            </div>
+            <div>
+                <span>Player 5:</span>
+                <input type="number" id="player5Number" placeholder="Enter number">
+            </div>
+        </div>
         <button onclick="sortList()">Sort List</button>
         <button onclick="toggleList()">Show/Hide List</button>
         <ul id="playerList" class="hidden"></ul>
