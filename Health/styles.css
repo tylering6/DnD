@@ -9,6 +9,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/*Light/Dark Mode*/
 body.light-mode {
     background-color: white;
     color: black;
@@ -108,16 +109,9 @@ body.dark-mode .blank .blank1 .player-level {
     align-items: center;
     gap: 10px;
 }
+/*End Light/Dark Mode*/
 
-.player {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0, 0, 0);
-    margin: 100;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-}
+ /*Page Placement*/
 .Resviel {
     position: fixed;
     top: 100px;
@@ -130,12 +124,12 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Ukudash {
     position: fixed;
-    top: 475px;
+    top: 500px;
     left: 50px;
 }
 .Garak {
     position: fixed;
-    top: 475px;
+    top: 500px;
     left: 650px;
 }
 .Miyah {
@@ -143,7 +137,9 @@ body.dark-mode .blank .blank1 .player-level {
     top: 850px;
     left: 350;
 }
+/*End Page Placement*/
 
+/*Different Colors??*/
 .player2 {
     position: relative;
     overflow: hidden;
@@ -163,6 +159,18 @@ body.dark-mode .blank .blank1 .player-level {
 .player2::after {
     background-color: #009af3a6; /* Second color */
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+/*End Different Colors??*/
+
+/*Character info*/
+.player {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    margin: 100;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
 }
 .player img {
     border-radius: 32%;
@@ -197,3 +205,4 @@ body.dark-mode .blank .blank1 .player-level {
     font-weight: 3000;
     z-index: 2;
 }
+/*End Character info*/
