@@ -101,6 +101,9 @@ body.light-mode .blank .blank1 .player-level {
 body.dark-mode .blank .blank1 .player-level {
     background-color: #333333;
 }
+/*End Light/Dark Mode*/
+
+/*Page Placement*/
 .change {
     position: fixed;
     top: 25px;
@@ -109,9 +112,14 @@ body.dark-mode .blank .blank1 .player-level {
     align-items: center;
     gap: 10px;
 }
-/*End Light/Dark Mode*/
-
- /*Page Placement*/
+.Initiative {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .Resviel {
     position: absolute;
     top: 100px;
