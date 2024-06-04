@@ -122,27 +122,27 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Resviel {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 50px;
 }
 .Etheriel {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 670px;
 }
 .Ukudash {
     position: absolute;
-    top: 475px;
+    top: 425px;
     left: 50px;
 }
 .Garak {
     position: absolute;
-    top: 475px;
+    top: 425px;
     left: 670px;
 }
 .Miyah {
     position: absolute;
-    top: 850px;
+    top: 800px;
     left: 310;
 }
 /*End Page Placement*/
