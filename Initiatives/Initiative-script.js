@@ -24,10 +24,13 @@ function removeEnemy(name) {
 }
 
 function sortList() {
-    const allPlayers = [...permanentPlayers.map(player => ({
-        name: player.name,
-        number: parseInt(document.getElementById(player.id).value) || 0
-    })), ...enemies];
+    const allPlayers = [
+        ...permanentPlayers.map(player => ({
+            name: player.name,
+            number: parseInt(document.getElementById(player.id).value) || 0
+        })),
+        ...enemies
+    ];
     allPlayers.sort((a, b) => a.number - b.number);
     updateList(allPlayers);
 }
@@ -53,15 +56,19 @@ function updateList(players = []) {
 
     players.forEach(player => {
         const li = document.createElement('li');
-        li.textContent = `${player.name}: ${player.number}`;
-
+        
         if (!player.name.startsWith('Player ')) {
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
+            removeButton.className = 'remove-btn';
             removeButton.onclick = () => removeEnemy(player.name);
             li.appendChild(removeButton);
         }
 
+        const span = document.createElement('span');
+        span.textContent = `${player.name}: ${player.number}`;
+        li.appendChild(span);
+        
         playerList.appendChild(li);
     });
 }
