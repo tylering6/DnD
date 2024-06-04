@@ -1,7 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    width: 80%;
-    max-width: 1100px;
     height: auto;
     margin: 0;
     padding: 50px;
@@ -132,17 +130,17 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .player3a {
     position: fixed;
-    top: 450px;
+    top: 475px;
     left: 50px;
 }
 .player4a {
     position: fixed;
-    top: 450px;
+    top: 475px;
     left: 600px;
 }
 .player5a {
     position: fixed;
-    top: 800px;
+    top: 850px;
     left: 300;
 }
 
