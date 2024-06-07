@@ -11,12 +11,13 @@ let currentPlayerIndex = 0;
 function addEnemy() {
     const enemyName = document.getElementById('EnemyName').value;
     const enemyNumber = document.getElementById('EnemyRoll').value;
+
     if (enemyName && enemyNumber && !enemies.some(enemy => enemy.name === enemyName)) {
         enemies.push({ name: enemyName, number: parseInt(enemyNumber) });
         updateList();
         document.getElementById('EnemyName').value = '';
         document.getElementById('EnemyRoll').value = '';
-        console.log('Added Enemy:', enemies);
+        console.log('Added Enemy:', enemies); // Debugging log
     } else {
         console.warn('Enemy already exists or invalid input');
     }
@@ -25,7 +26,7 @@ function addEnemy() {
 function removeEnemy(name) {
     enemies = enemies.filter(enemy => enemy.name !== name);
     updateList();
-    console.log('Removed Enemy:', enemies);
+    console.log('Removed Enemy:', enemies); // Debugging log
 }
 
 function sortList() {
@@ -46,6 +47,7 @@ function toggleList() {
     inputArea.classList.toggle('hidden');
     playerList.classList.toggle('hidden');
 
+    // Debugging logs to check toggle functionality
     console.log('Toggle List Button Clicked');
     console.log('Input Area Hidden:', inputArea.classList.contains('hidden'));
     console.log('Player List Hidden:', playerList.classList.contains('hidden'));
@@ -69,7 +71,7 @@ function nextPlayer() {
 
 function updateList(players = []) {
     const playerList = document.getElementById('playerList');
-    playerList.innerHTML = '';
+    playerList.innerHTML = ''; // Clear the current list
 
     if (players.length === 0) {
         players = [
