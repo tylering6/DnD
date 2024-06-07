@@ -111,7 +111,7 @@ body.dark-mode .blank .blank1 .player-level {
     }
 
 .Initiative {
-    position: absolute;
+    position: fixed;
     top: 75px;
     right: 10px;
     display: flex;
