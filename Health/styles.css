@@ -166,23 +166,23 @@ body.dark-mode .blank .blank1 .player-level {
     margin: 10px 0;
 }
 #health-number-1 {
-    color: #000000;
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 #health-number-2 {
-    color: #000000;
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 #health-number-3 {
-    color: #000000;
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 #health-number-4 {
-    color: #000000;
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 #health-number-5 {
-    color: #000000;
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 .player-level {
