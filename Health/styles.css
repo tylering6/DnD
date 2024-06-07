@@ -165,7 +165,23 @@ body.dark-mode .blank .blank1 .player-level {
     font-size: 1.5em;
     margin: 10px 0;
 }
-.player-health {
+#health-number-1 {
+    color: #000000;
+    font-size: 2em;
+}
+#health-number-2 {
+    color: #000000;
+    font-size: 2em;
+}
+#health-number-3 {
+    color: #000000;
+    font-size: 2em;
+}
+#health-number-4 {
+    color: #000000;
+    font-size: 2em;
+}
+#health-number-5 {
     color: #000000;
     font-size: 2em;
 }
