@@ -104,14 +104,12 @@ body.dark-mode .blank .blank1 .player-level {
 /*End Light/Dark Mode*/
 
 /*Page Placement*/
-.change {
-    position: absolute;
-    top: 25px;
+.Update_Notes {
+    position: fixed;
+    top: 40px;
     right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    }
+
 .Initiative {
     position: absolute;
     top: 75px;
@@ -128,7 +126,7 @@ body.dark-mode .blank .blank1 .player-level {
 .Etheriel {
     position: absolute;
     top: 50px;
-    left: 670px;
+    left: 750px;
 }
 .Ukudash {
     position: absolute;
@@ -138,37 +136,14 @@ body.dark-mode .blank .blank1 .player-level {
 .Garak {
     position: absolute;
     top: 425px;
-    left: 670px;
+    left: 750px;
 }
 .Miyah {
     position: absolute;
     top: 800px;
-    left: 310;
+    left: 400px;
 }
 /*End Page Placement*/
-
-/*Different Colors??*/
-.player2 {
-    position: relative;
-    overflow: hidden;
-}
-.player2::before,
-.player2::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Ensure it's behind the content */
-}
-.player2::before {
-    background-color: #a200ff60; /* First color */
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-.player2::after {
-    background-color: #009af3a6; /* Second color */
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-}
-/*End Different Colors??*/
 
 /*Character info*/
 .player {
