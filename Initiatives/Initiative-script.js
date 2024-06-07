@@ -6,16 +6,17 @@ const permanentPlayers = [
     { name: 'Garak', id: 'player4Number' },
     { name: 'Miyah', id: 'player5Number' }
 ];
+let currentPlayerIndex = 0;
 
 function addEnemy() {
     const enemyName = document.getElementById('EnemyName').value;
     const enemyNumber = document.getElementById('EnemyRoll').value;
     if (enemyName && enemyNumber && !enemies.some(enemy => enemy.name === enemyName)) {
         enemies.push({ name: enemyName, number: parseInt(enemyNumber) });
-        updateList(); // Call updateList to reflect the changes in the list
+        updateList();
         document.getElementById('EnemyName').value = '';
         document.getElementById('EnemyRoll').value = '';
-        console.log('Added Enemy:', enemies); // Debugging log
+        console.log('Added Enemy:', enemies);
     } else {
         console.warn('Enemy already exists or invalid input');
     }
@@ -24,7 +25,7 @@ function addEnemy() {
 function removeEnemy(name) {
     enemies = enemies.filter(enemy => enemy.name !== name);
     updateList();
-    console.log('Removed Enemy:', enemies); // Debugging log
+    console.log('Removed Enemy:', enemies);
 }
 
 function sortList() {
@@ -45,15 +46,30 @@ function toggleList() {
     inputArea.classList.toggle('hidden');
     playerList.classList.toggle('hidden');
 
-    // Debugging logs to check toggle functionality
     console.log('Toggle List Button Clicked');
     console.log('Input Area Hidden:', inputArea.classList.contains('hidden'));
     console.log('Player List Hidden:', playerList.classList.contains('hidden'));
 }
 
+function nextPlayer() {
+    const playerListItems = document.querySelectorAll('#playerList li');
+    if (playerListItems.length === 0) return;
+
+    // Remove current player indicator
+    playerListItems[currentPlayerIndex].classList.remove('current-player');
+
+    // Move to the next player
+    currentPlayerIndex = (currentPlayerIndex + 1) % playerListItems.length;
+
+    // Add current player indicator
+    playerListItems[currentPlayerIndex].classList.add('current-player');
+
+    console.log('Next Player:', currentPlayerIndex);
+}
+
 function updateList(players = []) {
     const playerList = document.getElementById('playerList');
-    playerList.innerHTML = ''; // Clear the current list
+    playerList.innerHTML = '';
 
     if (players.length === 0) {
         players = [
@@ -84,7 +100,15 @@ function updateList(players = []) {
         playerList.appendChild(li);
     });
 
-    console.log('Updated List:', players); // Debugging log
+    console.log('Updated List:', players);
+
+    // Reset the current player index if it goes out of range
+    currentPlayerIndex = Math.min(currentPlayerIndex, players.length - 1);
+    // Highlight the current player
+    const playerListItems = document.querySelectorAll('#playerList li');
+    if (playerListItems.length > 0) {
+        playerListItems[currentPlayerIndex].classList.add('current-player');
+    }
 }
 
 // Initialize list with permanent players and current enemies

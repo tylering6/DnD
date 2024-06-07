@@ -20,12 +20,18 @@ body {
     width: 100%;
     max-width: 600px;
     align-content: center;
+    font-size: 1.5em;
+}
+
+/* Styles for the input area */
+#inputArea {
+    margin-bottom: 20px;
 }
 
 input {
     padding: 10px;
     margin: 5px;
-    width: 150px;
+    width: 150px
 }
 
 button {
@@ -34,25 +40,69 @@ button {
     cursor: pointer;
 }
 
-ul {
+/* Styles for the list */
+ul#playerList {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden;
 }
 
+ul#playerList li {
+    text-align: center;
+    background: #5c5c5cc0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    padding: 20px;
+    max-width: 100%;
+    align-content: center;
+    font-size: 1.1em;
+    overflow: hidden;
+}
+
+ul#playerList li span {
+    flex-grow: 1;
+}
+
+ul#playerList li .remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+/* Hidden class to hide elements */
 .hidden {
     display: none;
 }
 
+/* Additional styles for permanent players section */
 #permanentPlayers div {
     margin: 10px 0;
 }
 
-.remove-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: 0.8em;
+/* Current player indicator with arrow */
+.current-player {
+    position: relative;
+    background-color: #dff0d8;
+    border-left: 5px solid green;
+    padding-left: 10px;
+}
+
+.current-player::before {
+    content: '→'; /* Arrow symbol */
+    position: absolute;
+    left: -20px;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: green;
 }

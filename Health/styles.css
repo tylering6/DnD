@@ -160,32 +160,26 @@ body.dark-mode .blank .blank1 .player-level {
     height: 175px;
     width: 175px;
     object-fit: cover;
-    z-index: 2;
 }
 .player-name {
     font-size: 1.5em;
     margin: 10px 0;
-    z-index: 2;
 }
 .player-health {
     color: #000000;
     font-size: 1.5em;
-    z-index: 2;
 }
 .player-level {
     transition: background-color 0.3s;
-    z-index: 2;
 }
 .Heal-button {
     background-color: green;
     color: white;
     font-weight: 3000;
-    z-index: 2;
 }
 .Damage-button {
     background-color: red;
     color: black;
     font-weight: 3000;
-    z-index: 2;
 }
 /*End Character info*/
