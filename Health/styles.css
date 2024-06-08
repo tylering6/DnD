@@ -168,27 +168,22 @@ body.dark-mode .blank .blank1 .player-level {
 #health-number-1 {
     transition: color 0.3s;
     font-size: 1.5em;
-    padding: 2px;
 }
 #health-number-2 {
     transition: color 0.3s;
     font-size: 1.5em;
-    padding: 10px;
 }
 #health-number-3 {
     transition: color 0.3s;
     font-size: 1.5em;
-    padding: 10px;
 }
 #health-number-4 {
     transition: color 0.3s;
     font-size: 1.5em;
-    padding: 2px;
 }
 #health-number-5 {
     transition: color 0.3s;
     font-size: 1.5em;
-    padding: 2px;
 }
 .player-level {
     transition: background-color 0.3s;
