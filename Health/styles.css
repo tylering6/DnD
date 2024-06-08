@@ -162,7 +162,7 @@ body.dark-mode .blank .blank1 .player-level {
     object-fit: cover;
 }
 .player-name {
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin: 10px 0;
 }
 #health-number-1 {
@@ -187,16 +187,40 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .player-level {
     transition: background-color 0.3s;
-    font-size: 1.5em;
 }
+/*End Character Info*/
+
+/*Health Change*/
 .Heal-button {
     background-color: green;
     color: white;
     font-weight: 3000;
+    size: 1.2em;
 }
 .Damage-button {
     background-color: red;
     color: black;
     font-weight: 3000;
+    size: 1.2em;
 }
-/*End Character info*/
+#custom-amount-1 {
+    transition: color 0.3s;
+    size: 1.2em;
+}
+#custom-amount-2 {
+    transition: color 0.3s;
+    size: 1.2em;
+}
+#custom-amount-3 {
+    transition: color 0.3s;
+    size: 1.2em;
+}
+#custom-amount-4 {
+    transition: color 0.3s;
+    size: 1.2em;
+}
+#custom-amount-5 {
+    transition: color 0.3s;
+    size: 1.2em;
+}
+/*End Health Change*/
