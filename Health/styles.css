@@ -130,17 +130,17 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Ukudash {
     position: absolute;
-    top: 450px;
+    top: 425px;
     left: 50px;
 }
 .Garak {
     position: absolute;
-    top: 450px;
+    top: 425px;
     left: 750px;
 }
 .Miyah {
     position: absolute;
-    top: 875px;
+    top: 850px;
     left: 400px;
 }
 /*End Page Placement*/
@@ -168,22 +168,27 @@ body.dark-mode .blank .blank1 .player-level {
 #health-number-1 {
     transition: color 0.3s;
     font-size: 1.5em;
+    padding: 10px;
 }
 #health-number-2 {
     transition: color 0.3s;
     font-size: 1.5em;
+    padding: 10px;
 }
 #health-number-3 {
     transition: color 0.3s;
     font-size: 1.5em;
+    padding: 10px;
 }
 #health-number-4 {
     transition: color 0.3s;
     font-size: 1.5em;
+    padding: 10px;
 }
 #health-number-5 {
     transition: color 0.3s;
     font-size: 1.5em;
+    padding: 10px;
 }
 .player-level {
     transition: background-color 0.3s;
