@@ -21,7 +21,7 @@ body.dark-mode {
 }
 
 .switch-container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     display: flex;
@@ -105,13 +105,13 @@ body.dark-mode .player-level {
 
 /*Page Placement*/
 .Update_Notes {
-    position: absolute;
+    position: fixed;
     top: 40px;
     right: 10px;
     }
 
 .Initiative {
-    position: absolute;
+    position: fixed;
     top: 75px;
     right: 10px;
     display: flex;
@@ -120,27 +120,27 @@ body.dark-mode .player-level {
 }
 .Resviel {
     position: absolute;
-    top: 50px;
+    top: 125px;
     left: 50px;
 }
 .Etheriel {
     position: absolute;
-    top: 50px;
+    top: 125px;
     left: 750px;
 }
 .Ukudash {
     position: absolute;
-    top: 430px;
+    top: 485px;
     left: 50px;
 }
 .Garak {
     position: absolute;
-    top: 430px;
+    top: 485px;
     left: 750px;
 }
 .Miyah {
     position: absolute;
-    top: 810px;
+    top: 845px;
     left: 400px;
 }
 /*End Page Placement*/
@@ -157,13 +157,16 @@ body.dark-mode .player-level {
 }
 .player img {
     border-radius: 32%;
-    height: 175px;
-    width: 175px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
 }
 .player-name {
     font-size: 1.5em;
     margin: 10px 0;
+}
+.player-level {
+    transition: background-color 0.3s;
 }
 #health-number-1 {
     transition: color 0.3s;
@@ -189,10 +192,6 @@ body.dark-mode .player-level {
     transition: color 0.3s;
     font-size: 1.5em;
     margin: 15px;
-}
-.player-level {
-    transition: background-color 0.3s;
-    padding-bottom: 0px;
 }
 /*End Character Info*/
 
