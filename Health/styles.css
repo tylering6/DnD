@@ -104,20 +104,22 @@ body.dark-mode .player-level {
 /*End Light/Dark Mode*/
 
 /*Page Placement*/
-.Update_Notes {
+.Login {
     position: fixed;
     top: 40px;
     right: 10px;
-    }
-
+}
 .Initiative {
     position: fixed;
     top: 75px;
     right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
+.Update_Notes {
+    position: fixed;
+    top: 110px;
+    right: 10px;
+}
+
 .Resviel {
     position: absolute;
     top: 125px;
@@ -229,3 +231,4 @@ body.dark-mode .player-level {
     size: 1.4em;
 }
 /*End Health Change*/
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="Login-styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <button id="showLogin">Login</button>
+            <button id="showSignup">Sign Up</button>
+        </div>
+        
+        <div id="loginForm" class="form-content">
+            <h2>Login</h2>
+            <form>
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginErrorMessage"></div>
+        </div>
+        
+        <div id="signupForm" class="form-content hidden">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div id="signupErrorMessage"></div>
+        </div>
+    </div>
+    <script src="Login-script.js"></script>
+</body>
+</html>
