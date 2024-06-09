@@ -5,7 +5,7 @@
         "notes": [
             "- Added character pictures next to the names in the initiative tracker",
             "- Enemies now automatically roll a number between 1 and 20 instead of manually entering a number",
-            "- The current player indicated now changes the background color of the current player as well as still having the arrow"
+            "- The current player indicator now also changes the background color of the current player"
         ]
     }, 
     {
