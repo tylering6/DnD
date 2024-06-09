@@ -140,7 +140,7 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Miyah {
     position: absolute;
-    top: 800px;
+    top: 850px;
     left: 400px;
 }
 /*End Page Placement*/
@@ -165,21 +165,63 @@ body.dark-mode .blank .blank1 .player-level {
     font-size: 1.5em;
     margin: 10px 0;
 }
-.player-health {
-    color: #000000;
+#health-number-1 {
+    transition: color 0.3s;
+    font-size: 1.5em;
+}
+#health-number-2 {
+    transition: color 0.3s;
+    font-size: 1.5em;
+}
+#health-number-3 {
+    transition: color 0.3s;
+    font-size: 1.5em;
+}
+#health-number-4 {
+    transition: color 0.3s;
+    font-size: 1.5em;
+}
+#health-number-5 {
+    transition: color 0.3s;
     font-size: 1.5em;
 }
 .player-level {
     transition: background-color 0.3s;
+    padding-bottom: 0px;
 }
+/*End Character Info*/
+
+/*Health Change*/
 .Heal-button {
     background-color: green;
     color: white;
     font-weight: 3000;
+    size: 1.4em;
 }
 .Damage-button {
     background-color: red;
     color: black;
     font-weight: 3000;
+    size: 1.4em;
 }
-/*End Character info*/
+#custom-amount-1 {
+    transition: color 0.3s;
+    size: 1.4em;
+}
+#custom-amount-2 {
+    transition: color 0.3s;
+    size: 1.4em;
+}
+#custom-amount-3 {
+    transition: color 0.3s;
+    size: 1.4em;
+}
+#custom-amount-4 {
+    transition: color 0.3s;
+    size: 1.4em;
+}
+#custom-amount-5 {
+    transition: color 0.3s;
+    size: 1.4em;
+}
+/*End Health Change*/

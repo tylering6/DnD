@@ -1,7 +1,7 @@
         const playersHealth = {
             1: { current: 47, max: 47 },
             2: { current: 52, max: 52 },
-            3: { current: 47, max: 47 },
+            3: { current: 45, max: 45 },
             4: { current: 57, max: 57 },
             5: { current: 45, max: 45 }
         };
