@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="Initiative-Styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Initiatives List</h1>
-        <button onclick="toggleList()">Show/Hide List</button>
+    <button onclick="toggleContainer()">Show / Hide Initiatives Tracker</button> <!-- New Button for toggling the entire container --> 
+    <div class="container" id="mainContainer">
+        <button onclick="toggleList()">Toggle List / Input</button> <!-- Renamed for clarity -->
         <button onclick="nextPlayer()">Next Player</button>
         <div id="inputArea">
             <div>
-                <input type="text" id="EnemyName" placeholder="Enter Enemy Name">
-                <input type="number" id="EnemyRoll" placeholder="Enter Enemy Roll">
+                <input type="text" id="enemyInput" placeholder="Enter enemy name">
                 <button onclick="addEnemy()">Add Enemy</button>
             </div>
-            <div id="PermanentPlayers">
+            <div id="permanentPlayers">
                 <div class="Players">
                     <span>Resviel:</span>
                     <input type="number" id="player1Number" placeholder="Enter roll" min="0">
@@ -41,7 +40,7 @@
             </div>
             <button onclick="sortList()">Sort List</button>
         </div>
-        <ul id="playerList" class="hidden"></ul>
+        <ul id="playerList" class="hidden"></ul> <!-- Initially hidden -->
     </div>
     <script src="Initiative-script.js"></script>
 </body>
