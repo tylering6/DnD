@@ -94,11 +94,11 @@ input:checked + .slider:before {
     }
 }
 
-body.light-mode .blank .blank1 .player-level {
+body.light-mode .player-level {
     background-color: #f0f0f0;
 }
 
-body.dark-mode .blank .blank1 .player-level {
+body.dark-mode .player-level {
     background-color: #333333;
 }
 /*End Light/Dark Mode*/
@@ -130,17 +130,17 @@ body.dark-mode .blank .blank1 .player-level {
 }
 .Ukudash {
     position: absolute;
-    top: 425px;
+    top: 430px;
     left: 50px;
 }
 .Garak {
     position: absolute;
-    top: 425px;
+    top: 430px;
     left: 750px;
 }
 .Miyah {
     position: absolute;
-    top: 850px;
+    top: 810px;
     left: 400px;
 }
 /*End Page Placement*/
@@ -168,25 +168,30 @@ body.dark-mode .blank .blank1 .player-level {
 #health-number-1 {
     transition: color 0.3s;
     font-size: 1.5em;
+    margin: 15px;
 }
 #health-number-2 {
     transition: color 0.3s;
     font-size: 1.5em;
+    margin: 15px;
 }
 #health-number-3 {
     transition: color 0.3s;
     font-size: 1.5em;
+    margin: 15px;
 }
 #health-number-4 {
     transition: color 0.3s;
     font-size: 1.5em;
+    margin: 15px;
 }
 #health-number-5 {
     transition: color 0.3s;
     font-size: 1.5em;
+    margin: 15px;
 }
 .player-level {
-    transition: background-color 0.3s;
+    /* transition: background-color 0.3s; */
     padding-bottom: 0px;
 }
 /*End Character Info*/
