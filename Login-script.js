@@ -18,7 +18,7 @@ document.querySelector('#loginForm form').addEventListener('submit', function(ev
     // Mock backend validation
     if (username === 'user' && password === 'password') {
         alert('Login successful!');
-        window.location.href = 'dashboard.html';  // Redirect to dashboard
+        window.location.href = 'Dashboard.html';  // Redirect to dashboard
     } else {
         document.getElementById('loginErrorMessage').textContent = 'Invalid username or password.';
     }
