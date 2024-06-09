@@ -99,7 +99,7 @@ body.light-mode .player-level {
 }
 
 body.dark-mode .player-level {
-    background-color: #333333;
+    background-color: #000000;
 }
 /*End Light/Dark Mode*/
 
@@ -191,7 +191,7 @@ body.dark-mode .player-level {
     margin: 15px;
 }
 .player-level {
-    /* transition: background-color 0.3s; */
+    transition: background-color 0.3s;
     padding-bottom: 0px;
 }
 /*End Character Info*/
