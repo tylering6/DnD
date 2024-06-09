@@ -1,9 +1,9 @@
         const playersHealth = {
-            1: { current: 47, max: 47 },
-            2: { current: 52, max: 52 },
-            3: { current: 45, max: 45 },
-            4: { current: 57, max: 57 },
-            5: { current: 45, max: 45 }
+        /*  Resviel  */  1: { current: 47, max: 47 },
+        /*  Etheriel */  2: { current: 45, max: 45 },  
+        /*  Ukudash  */  3: { current: 52, max: 52 },  
+        /*  Garak    */  4: { current: 57, max: 57 },  
+        /*  Miyah    */  5: { current: 45, max: 45 }   
         };
 
         function updateHealthDisplay(playerId) {
@@ -30,6 +30,11 @@
             const customAmount = parseInt(customAmountInput.value, 10);
             if (!isNaN(customAmount)) {
                 adjustHealth(playerId, multiplier * customAmount);
+                document.getElementById('custom-amount-1').value = '';
+                document.getElementById('custom-amount-2').value = '';
+                document.getElementById('custom-amount-3').value = '';
+                document.getElementById('custom-amount-4').value = '';
+                document.getElementById('custom-amount-5').value = '';
             } else {
                 console.error(`Invalid custom amount entered for player ${playerId}`);
             }
