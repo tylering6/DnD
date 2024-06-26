@@ -1,9 +1,9 @@
 const playersHealth = {
-/*  Resviel  */  1: { current: 47, max: 47 },
-/*  Etheriel */  2: { current: 45, max: 45 },  
-/*  Ukudash  */  3: { current: 52, max: 52 },  
-/*  Garak    */  4: { current: 57, max: 57 },  
-/*  Miyah    */  5: { current: 45, max: 45 }   
+/*  Resviel  */  1: { current: 55, max: 55 },
+/*  Etheriel */  2: { current: 54, max: 54 },  
+/*  Ukudash  */  3: { current: 61, max: 61 },  
+/*  Garak    */  4: { current: 70, max: 70 },  
+/*  Miyah    */  5: { current: 52, max: 52 }   
 };
 
 function updateHealthDisplay(playerId) {
