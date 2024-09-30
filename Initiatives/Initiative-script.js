@@ -1,10 +1,11 @@
 let enemies = [];
+let customplayers = [];
 const permanentPlayers = [
     { name: 'Resviel', id: 'player1Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Resviel.png' },
     { name: 'Etheriel', id: 'player2Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Etheriel.png' },
     { name: 'Ukudash', id: 'player3Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Ukudash.png' },
-    { name: 'Garak', id: 'player4Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Garak.png' },
-    { name: 'Miyah', id: 'player5Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Miyah.png' }
+    { name: 'Asharra', id: 'player4Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Asharra.png' },
+    { name: 'Ergo', id: 'player5Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Ergo.png' }
 ];
 let currentPlayerIndex = 0;
 
@@ -28,6 +29,21 @@ function removeEnemy(name) {
     console.log('Removed Enemy:', enemies); // Debugging log
 }
 
+function addPlayer() {
+    const playerName = document.getElementById('PlayerName').value;
+    const playerNumber = parseInt(document.getElementById('PlayerNumber').value);
+
+    if (playerName && !isNaN(playerNumber) && !customplayers.some(player => player.name === playerName)) {
+        customplayers.push({ name: playerName, number: playerNumber });
+        updateList();
+        document.getElementById('PlayerName').value = ''; // Clear name input field
+        document.getElementById('PlayerNumber').value = ''; // Clear number input field
+        console.log('Added Player:', customplayers); // Debugging log
+    } else {
+        console.warn('Player already exists or invalid input');
+    }
+}
+
 function sortList() {
     const allPlayers = [
         ...permanentPlayers.map(player => ({
@@ -35,7 +51,8 @@ function sortList() {
             number: parseInt(document.getElementById(player.id).value) || 0,
             img: player.img
         })),
-        ...enemies
+        ...enemies,
+        ...customplayers
     ];
     allPlayers.sort((a, b) => b.number - a.number); // Sort from highest to lowest
     updateList(allPlayers);
@@ -95,7 +112,8 @@ function updateList(players = []) {
                 number: parseInt(document.getElementById(player.id).value) || 0,
                 img: player.img
             })),
-            ...enemies
+            ...enemies,
+            ...customplayers
         ];
         // Sort the players by number from highest to lowest
         players.sort((a, b) => b.number - a.number);
@@ -139,7 +157,7 @@ function updateList(players = []) {
         playerList.appendChild(li);
     });
 
-    console.log('Updated List:', players);
+    // console.log('Updated List:', players);
 }
 
 // Initialize the list with permanent players and current enemies
