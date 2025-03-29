@@ -1,11 +1,11 @@
 let enemies = [];
 let customplayers = [];
 const permanentPlayers = [
-    { name: 'Resviel', id: 'player1Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Resviel.png' },
-    { name: 'Etheriel', id: 'player2Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Etheriel.png' },
-    { name: 'Ukudash', id: 'player3Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Ukudash.png' },
-    { name: 'Asharra', id: 'player4Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Asharra.png' },
-    { name: 'Ergo', id: 'player5Number', img: 'https://garakobama.mvhsrobotics.org/Health/Pictures/Ergo.png' }
+    { name: 'Resviel', id: 'player1Number', img: 'https://garakobama.tylering.org/Health/Pictures/Resviel.png' },
+    { name: 'Etheriel', id: 'player2Number', img: 'https://garakobama.tylering.org/Health/Pictures/Etheriel.png' },
+    { name: 'Ukudash', id: 'player3Number', img: 'https://garakobama.tylering.org/Health/Pictures/Ukudash.png' },
+    { name: 'Asharra', id: 'player4Number', img: 'https://garakobama.tylering.org/Health/Pictures/Asharra.png' },
+    { name: 'Ergo', id: 'player5Number', img: 'https://garakobama.tylering.org/Health/Pictures/Ergo.png' }
 ];
 let currentPlayerIndex = 0;
 
