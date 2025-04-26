@@ -13,7 +13,7 @@ function addEnemy() {
     const enemyName = document.getElementById('EnemyName').value;
 
     if (enemyName && !enemies.some(enemy => enemy.name === enemyName)) {
-        const randomNumber = Math.floor(Math.random() * 20) + 1; // Random number between 1 and 20
+        const randomNumber = (Math.floor(Math.random() * 20) + 1) + (Math.floor(Math.random() * 10) + 1); // Random number between 1 and 20
          // If the random number is 20, set it to 100 bc crit
          if (randomNumber === 20) {
             randomNumber = 100;
