@@ -4,7 +4,7 @@ const permanentPlayers = [
     { name: 'Resviel', id: 'player1Number', img: 'https://garakobama.tylering.org/Health/Pictures/Resviel.png' },
     { name: 'Etheriel', id: 'player2Number', img: 'https://garakobama.tylering.org/Health/Pictures/Etheriel.png' },
     { name: 'Ukudash', id: 'player3Number', img: 'https://garakobama.tylering.org/Health/Pictures/Ukudash.png' },
-    { name: 'Azrael', id: 'player4Number', img: 'https://garakobama.tylering.org/Health/Pictures/Default.png' },
+    { name: 'Azrael', id: 'player4Number', img: 'https://garakobama.tylering.org/Health/Pictures/Azrael.png' },
     { name: 'Asteria', id: 'player5Number', img: 'https://garakobama.tylering.org/Health/Pictures/Default.png' }
 ];
 let currentPlayerIndex = 0;
